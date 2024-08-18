@@ -1,4 +1,3 @@
-
 *{
     margin:0;
     padding: 0;
@@ -11,9 +10,12 @@
     width:100%;
     background: url(image1.jpg);
     display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     position: relative;
     background-size: cover;
     background-position: center;
+    text-align: center; /* Center text */
 }
 .image-generator::before{
     content:"" ;
@@ -28,33 +30,25 @@
 .content {
     color: #fff;
     max-width: 800px;
-    margin-left: 350px;
-    margin-bottom: 50px;
-    text-align: center;
-    border: 50px;
-    padding: 150px;
-    text-align: center;
+    padding: 0 20px; /* Adjust padding for small screens */
     position: relative;
-
+    z-index: 2;
 }
 
 
 h1{
     font-size: 1.5rem;
     font-weight: 700;
-    text-align: center;
-    padding-left: 100px;
 }
 p{
     font-size: 1.00rem;
     margin-top: 10px;
-    text-align: center;
-    padding-left: 100px;
-
 }
+
 .generator-form{
     height: 80px;
-    width: 625px;
+    width: 100%;
+    max-width: 625px;
     display: flex;
     padding: 6px;
     margin: 45px 0 15px;
@@ -62,7 +56,6 @@ p{
     justify-content: space-between;
     background: #fff;
     border-radius: 30px;
-
 }
 .prompt-input{
     width: 100%;
@@ -83,7 +76,6 @@ p{
 .img-quantity{
     outline: none;
     border: none;
-    font-size: 1rem;
     font-size: 1rem;
     background-color: #fff; 
     z-index: 10; 
@@ -142,4 +134,23 @@ p{
     width: 14px;
     height: 14px;
 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .generator-form {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .prompt-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .controls {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
