@@ -71,6 +71,8 @@ p{
     outline: none;
     border: none;
     background: none;
+    z-index: 1000;
+    pointer-events: auto;
 }
 .controls{
     display: flex;
